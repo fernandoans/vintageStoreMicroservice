@@ -2,6 +2,9 @@
 
 Este é um projeto de aprendizado para o Quarkus (https://quarkus.io/).
 
+Arquitetura dos Micro Serviços:
+![Arquitetura.png](Arquitetura.png)
+
 ## Execução
 
 Para subir via Docker, primeiro é necessário construir cada projeto com o comando:
