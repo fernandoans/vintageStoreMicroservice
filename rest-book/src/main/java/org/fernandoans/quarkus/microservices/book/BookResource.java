@@ -5,8 +5,6 @@ import jakarta.json.bind.JsonbBuilder;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.eclipse.microprofile.faulttolerance.Fallback;
 import org.eclipse.microprofile.faulttolerance.Retry;
 import org.eclipse.microprofile.openapi.annotations.Operation;
@@ -25,7 +23,7 @@ public class BookResource {
     @RestClient
     NumberProxy proxy;
 
-    @Retry(delay = 3000, maxRetries = 3)
+    @Retry(delay = 3000)
     @Fallback(fallbackMethod = "fallbackOnCreatingABook")
     @POST
     @Produces(MediaType.APPLICATION_JSON)
