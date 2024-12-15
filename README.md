@@ -54,10 +54,10 @@ $ mvn quarkus:dev
 ```
 
 Mais informações ao iniciar os Microserviços em modo DEV, podem ser vistas em: 
-Number API: http://localhost:8701/q/dev-ui/welcome
-Book API: http://localhost:8702/q/dev-ui/welcome
+- Number API: http://localhost:8701/q/dev-ui/welcome
+- Book API: http://localhost:8702/q/dev-ui/welcome
 
 O projeto também conta com OpenAPI e a documentação dos contratos podem ser acessadas por: 
-Number API: http://localhost:8701/q/swagger-ui/#/
-Book API: http://localhost:8702/q/swagger-ui/#/
+- Number API: http://localhost:8701/q/swagger-ui/#/
+- Book API: http://localhost:8702/q/swagger-ui/#/
 
