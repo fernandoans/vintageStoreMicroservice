@@ -1,4 +1,4 @@
-package org.fernandoans.quarkus.microservices.number;
+package org.fernandoans.quarkus.microservices.book;
 
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 

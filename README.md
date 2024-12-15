@@ -2,8 +2,29 @@
 
 Este é um projeto de aprendizado para o Quarkus (https://quarkus.io/).
 
-Mais informações ao iniciar os Microserviços, podem ser vistas em: http://localhost:8080/q/dev-ui/welcome
+## Execução
 
-O projeto também conta com OpenAPI e a documentação dos contratos podem ser acessadas por: http://localhost:8080/q/swagger-ui/#/
+Para subir via Docker, primeiro é necessário construir cada projeto com o comando:
 
-Ainda se encontra em fase de construção.
+$ mvn package -Dquarkus.package.type=native -Dquarkus.native.container-build=true -Dquarkus.container-image.build=true
+
+Executar via Docker Compose:
+
+Na primeira vez: $ docker compose -f vintagestore-docker-compose.yaml up
+Nas próximas vezes: $ docker compose -f vintagestore-docker-compose.yaml start
+
+Para usar:
+
+1. Verificar a geração de Números de ISBN: $ curl http://localhost:8701/api/numbers
+2. Para criar um livro: $ curl -X POST http://localhost:8702/api/books -d "titulo=Senhor dos Anéis&autor=JRR Tolkien&anoPublicacao=1966&genero=Fantasia"
+
+## Documentação
+
+Mais informações ao iniciar os Microserviços em modo DEV, podem ser vistas em: 
+Number API: http://localhost:8701/q/dev-ui/welcome
+Book API: http://localhost:8702/q/dev-ui/welcome
+
+O projeto também conta com OpenAPI e a documentação dos contratos podem ser acessadas por: 
+Number API: http://localhost:8701/q/swagger-ui/#/
+Book API: http://localhost:8702/q/swagger-ui/#/
+

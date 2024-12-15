@@ -1,23 +1,19 @@
 # rest-book
+Documentação da API disponível em: http://localhost:8702/q/swagger-ui/#/
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+Este projeto foi criado usando o Quarkus (<https://quarkus.io/>), Supersonic Subatomic Java Framework.
 
-If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
-
-## Running the application in dev mode
-
-You can run your application in dev mode that enables live coding using:
+## Executar a aplicação em modo DEV
+Executar o código com:
 
 ```shell script
 ./mvnw quarkus:dev
 ```
+> **_NOTE:_**  Quarkus contém uma Dev UI, disponível em <http://localhost:8702/q/dev/>.
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
+## Empacotando e executando o microserviço
 
-## Packaging and running the application
-
-The application can be packaged using:
-
+A aplicação pode ser empacotada com:
 ```shell script
 ./mvnw package
 ```
